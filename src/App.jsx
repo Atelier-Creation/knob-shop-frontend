@@ -14,13 +14,17 @@ import CategoriesHeader from './Components/CategoriesPage/CategoriesHeader/Categ
 import TermsAndCondition from './Components/TermsAndCondition/TermsAndCondition'
 import { ProductDetails } from './Pages/ProductDetails';
 import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy'
+import ScrollToTop from './ScrollToTop/ScrollToTop';
 // import NavbarTop from './Components/Navbar/NavbarTop/NavbarTop';
 
 function App() {
   return (
+
     <Router>
       {/* <NewsletterModal /> */}
       {/* <NavbarTop /> */}
+      <ScrollToTop/>
+      <div className="page-fade">
       <Routes>x
         <Route path="/" element={<Home />} />
        <Route path='/category/:id' element={<ProductList/>}></Route>
@@ -29,6 +33,7 @@ function App() {
        <Route path='/terms-condition' element={<TermsAndCondition/>}></Route>
        <Route path='/privacy-policy' element={<PrivacyPolicy/>}></Route>
       </Routes>
+      </div>
     </Router>
   );
 }
